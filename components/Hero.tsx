@@ -4,21 +4,21 @@ import Image from 'next/image';
 import PioneerCards from '@/components/PioneerCards';
 import ReadyToRise from '@/components/ReadyToRise';
 
-const bp = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
 
 export default function Hero() {
   const featuredWork = [
-    { name: 'SIXT', years: '[2023-2025]', tag: 'Car rental', image: `${bp}/img/scroll/black-car.png` },
-    { name: 'Dojo – B2B', years: '[2021-2025]', tag: 'Fintech', image: `${bp}/img/scroll/card-pay.png` },
-    { name: 'Magnet Trade - B2B', years: '[2022-2025]', tag: 'Gaming', image: `${bp}/img/scroll/magnet.png` },
-    { name: 'Leading E Sim brand globally', years: '[2020-2025]', tag: 'Aviation', image: `${bp}/img/scroll/e-sim.png` },
-    { name: 'JD Sports', years: '[2023-2025]', tag: 'B2B SaaS', image: `${bp}/img/scroll/family.png` },
-    { name: 'Parkdean Resorts', years: '[2023-2025]', tag: 'B2B SaaS', image: `${bp}/img/scroll/beach.png` },
-    { name: 'Pooky', years: '[2023-2025]', tag: 'B2B SaaS', image: `${bp}/img/scroll/lamp.png` },
-    { name: 'Parkdean Resorts', years: '[2023-2025]', tag: 'B2B SaaS', image: `${bp}/img/scroll/river.png` },
-    { name: 'Revolution Beauty', years: '[2023-2025]', tag: 'B2B SaaS', image: `${bp}/img/scroll/cosmatices.png` },
-    { name: 'Lloyds Pharmacy', years: '[2023-2025]', tag: 'B2B SaaS', image: `${bp}/img/scroll/peach.png` },
-    { name: 'PrettyLittleThing', years: '[2023-2025]', tag: 'B2B SaaS', image: `${bp}/img/scroll/models.png` },
+    { name: 'SIXT', years: '[2023-2025]', tag: 'Car rental', image: '/img/scroll/black-car.png' },
+    { name: 'Dojo – B2B', years: '[2021-2025]', tag: 'Fintech', image: '/img/scroll/card-pay.png' },
+    { name: 'Magnet Trade - B2B', years: '[2022-2025]', tag: 'Gaming', image: '/img/scroll/magnet.png' },
+    { name: 'Leading E Sim brand globally', years: '[2020-2025]', tag: 'Aviation', image: '/img/scroll/e-sim.png' },
+    { name: 'JD Sports', years: '[2023-2025]', tag: 'B2B SaaS', image: '/img/scroll/family.png' },
+    { name: 'Parkdean Resorts', years: '[2023-2025]', tag: 'B2B SaaS', image: '/img/scroll/beach.png' },
+    { name: 'Pooky', years: '[2023-2025]', tag: 'B2B SaaS', image: '/img/scroll/lamp.png' },
+    { name: 'Parkdean Resorts', years: '[2023-2025]', tag: 'B2B SaaS', image: '/img/scroll/river.png' },
+    { name: 'Revolution Beauty', years: '[2023-2025]', tag: 'B2B SaaS', image: '/img/scroll/cosmatices.png' },
+    { name: 'Lloyds Pharmacy', years: '[2023-2025]', tag: 'B2B SaaS', image: '/img/scroll/peach.png' },
+    { name: 'PrettyLittleThing', years: '[2023-2025]', tag: 'B2B SaaS', image: '/img/scroll/models.png' },
   ];
 
   const [activeIndex, setActiveIndex] = useState(0);
@@ -73,16 +73,16 @@ export default function Hero() {
             <div className="flex animate-marquee" style={{ width: 'max-content' }}>
               {[0, 1].map((_, idx) => (
                 <div key={idx} className="flex items-center gap-[80px]" style={{ height: '96px', paddingRight: '80px' }}>
-                  <Image src={`${bp}/img/slide/axa.png`} alt="AXA" width={100} height={64} className="h-16 w-auto object-contain grayscale opacity-80" />
-                  <Image src={`${bp}/img/slide/capitalone.png`} alt="Capital One" width={100} height={64} className="h-16 w-auto object-contain grayscale opacity-80" />
-                  <Image src={`${bp}/img/slide/emirates.png`} alt="Emirates" width={100} height={64} className="h-16 w-auto object-contain grayscale opacity-80" />
-                  <Image src={`${bp}/img/slide/hubspot.png`} alt="HubSpot" width={100} height={64} className="h-16 w-auto object-contain grayscale opacity-80" />
-                  <Image src={`${bp}/img/slide/jd.png`} alt="JD" width={100} height={64} className="h-16 w-auto object-contain grayscale opacity-80" />
-                  <Image src={`${bp}/img/slide/kroger.png`} alt="Kroger" width={100} height={64} className="h-16 w-auto object-contain grayscale opacity-80" />
-                  <Image src={`${bp}/img/slide/playstation.png`} alt="PlayStation" width={100} height={64} className="h-16 w-auto object-contain grayscale opacity-80" />
-                  <Image src={`${bp}/img/slide/revolution.png`} alt="Revolution" width={150} height={96} className="h-16 w-auto object-contain grayscale opacity-80 scale-150" />
-                  <Image src={`${bp}/img/slide/sixt.png`} alt="SIXT" width={100} height={64} className="h-16 w-auto object-contain grayscale opacity-80" />
-                  <Image src={`${bp}/img/slide/xbox.png`} alt="Xbox" width={100} height={64} className="h-16 w-auto object-contain grayscale opacity-80" />
+                  <Image src="/img/slide/axa.png" alt="AXA" width={100} height={64} className="h-16 w-auto object-contain grayscale opacity-80" />
+                  <Image src="/img/slide/capitalone.png" alt="Capital One" width={100} height={64} className="h-16 w-auto object-contain grayscale opacity-80" />
+                  <Image src="/img/slide/emirates.png" alt="Emirates" width={100} height={64} className="h-16 w-auto object-contain grayscale opacity-80" />
+                  <Image src="/img/slide/hubspot.png" alt="HubSpot" width={100} height={64} className="h-16 w-auto object-contain grayscale opacity-80" />
+                  <Image src="/img/slide/jd.png" alt="JD" width={100} height={64} className="h-16 w-auto object-contain grayscale opacity-80" />
+                  <Image src="/img/slide/kroger.png" alt="Kroger" width={100} height={64} className="h-16 w-auto object-contain grayscale opacity-80" />
+                  <Image src="/img/slide/playstation.png" alt="PlayStation" width={100} height={64} className="h-16 w-auto object-contain grayscale opacity-80" />
+                  <Image src="/img/slide/revolution.png" alt="Revolution" width={150} height={96} className="h-16 w-auto object-contain grayscale opacity-80 scale-150" />
+                  <Image src="/img/slide/sixt.png" alt="SIXT" width={100} height={64} className="h-16 w-auto object-contain grayscale opacity-80" />
+                  <Image src="/img/slide/xbox.png" alt="Xbox" width={100} height={64} className="h-16 w-auto object-contain grayscale opacity-80" />
                 </div>
               ))}
             </div>
@@ -106,7 +106,7 @@ export default function Hero() {
                 <span className="inline-flex items-center md:items-end gap-3">
                   Discovery
                   <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-xl sm:rounded-2xl overflow-hidden shadow-md border border-white/20 flex-shrink-0 mb-1">
-                    <Image src={`${bp}/img/girl-board.png`} alt="Client" width={80} height={80} className="w-full h-full object-cover" />
+                    <Image src="/img/girl-board.png" alt="Client" width={80} height={80} className="w-full h-full object-cover" />
                   </div>
                 </span>
               </h2>
@@ -223,7 +223,7 @@ export default function Hero() {
           <h2 className="text-5xl sm:text-6xl font-black tracking-tight text-slate-900 flex flex-wrap items-center justify-start gap-4">
             Our
             <div className="inline-flex w-16 h-16 sm:w-16 sm:h-16 rounded-2xl overflow-hidden shadow-md border border-slate-200 mx-1 align-middle flex-shrink-0">
-              <Image src={`${bp}/img/meeting.png`} alt="Our Services" width={80} height={80} className="w-full h-full object-cover" />
+              <Image src="/img/meeting.png" alt="Our Services" width={80} height={80} className="w-full h-full object-cover" />
             </div>
             Services
           </h2>
@@ -235,12 +235,12 @@ export default function Hero() {
         <div className="mx-auto max-w-7xl">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16">
             {[
-              { label: 'Digital PR', image: `${bp}/img/services/man-card.png` },
-              { label: 'Organic Social & Content', image: `${bp}/img/services/organic-content.png` },
-              { label: 'Search & Growth Strategy', image: `${bp}/img/services/search-strategy.png` },
-              { label: 'Content Experience', image: `${bp}/img/services/content-experience.png` },
-              { label: 'Data & Growth Strategy', image: `${bp}/img/services/data-insights.png` },
-              { label: 'Onsite SEO', image: `${bp}/img/services/onsite-seo.png` },
+              { label: 'Digital PR', image: '/img/services/man-card.png' },
+              { label: 'Organic Social & Content', image: '/img/services/organic-content.png' },
+              { label: 'Search & Growth Strategy', image: '/img/services/search-strategy.png' },
+              { label: 'Content Experience', image: '/img/services/content-experience.png' },
+              { label: 'Data & Growth Strategy', image: '/img/services/data-insights.png' },
+              { label: 'Onsite SEO', image: '/img/services/onsite-seo.png' },
             ].map((service, i) => (
               <div
                 key={i}
@@ -296,7 +296,7 @@ export default function Hero() {
                       div { width: 280px !important; height: 160px !important; }
                     }
                   `}</style>
-                  <Image src={`${bp}/img/screen.png`} alt="" width={280} height={160} className="w-full h-full object-cover" />
+                  <Image src="/img/screen.png" alt="" width={280} height={160} className="w-full h-full object-cover" />
                 </div>
 
                 <span className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight text-slate-900 px-4 sm:px-8">
@@ -313,7 +313,7 @@ export default function Hero() {
                       div { width: 160px !important; height: 160px !important; }
                     }
                   `}</style>
-                  <Image src={`${bp}/img/gang.png`} alt="" width={160} height={160} className="w-full h-full object-cover" />
+                  <Image src="/img/gang.png" alt="" width={160} height={160} className="w-full h-full object-cover" />
                 </div>
 
               </div>
@@ -337,7 +337,7 @@ export default function Hero() {
               <h2 className="text-6xl sm:text-7xl md:text-6xl font-black tracking-tight text-slate-900 flex items-center gap-4">
                 What's
                 <div className="inline-flex w-16 h-16 sm:w-20 sm:h-20 md:w-16 md:h-16 rounded-2xl overflow-hidden flex-shrink-0">
-                  <Image src={`${bp}/img/concert.png`} alt="" width={80} height={80} className="w-full h-full object-cover" />
+                  <Image src="/img/concert.png" alt="" width={80} height={80} className="w-full h-full object-cover" />
                 </div>
               </h2>
               <h2 className="text-6xl sm:text-7xl md:text-6xl font-black tracking-tight text-slate-900">
@@ -358,25 +358,25 @@ export default function Hero() {
           <div className="flex md:grid md:grid-cols-3 overflow-x-auto md:overflow-visible snap-x snap-mandatory gap-6 no-scrollbar px-6 md:px-0">
             {[
               {
-                image: `${bp}/img/three-people.png`,
+                image: '/img/three-people.png',
                 author: 'Ray Saddiq',
-                authorImg: `${bp}/img/ray-saddiq.png`,
+                authorImg: '/img/ray-saddiq.png',
                 readTime: '3 mins',
                 title: 'Rise at Seven Appoints Hollie Lovell as Senior Operations Lead',
                 tag: null,
               },
               {
-                image: `${bp}/img/black-three.png`,
+                image: '/img/black-three.png',
                 author: 'Ray Saddiq',
-                authorImg: `${bp}/img/ray-saddiq.png`,
+                authorImg: '/img/ray-saddiq.png',
                 readTime: '2 mins',
                 title: 'Rise at Seven Exits Sheffield and Triples Manchester as new HQ as they go for global expansion',
                 tag: null,
               },
               {
-                image: `${bp}/img/bill-board.png`,
+                image: '/img/bill-board.png',
                 author: 'Carrie Rose',
-                authorImg: `${bp}/img/ray-saddiq.png`,
+                authorImg: '/img/ray-saddiq.png',
                 readTime: '2 mins',
                 title: "Ryan McNamara Is Now Rise at Seven's Global Operations Director",
                 tag: 'News',

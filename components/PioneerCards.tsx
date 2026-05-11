@@ -2,24 +2,20 @@
 import { useState } from "react";
 import Image from "next/image";
 
-const bp = process.env.NEXT_PUBLIC_BASE_PATH || '';
-
-
-
 const cards = [
     {
-        image: `${bp}/img/girl-board.png`,
+        image: "/img/girl-board.png",
         title: "Pioneers",
         body: "We're dedicated to creating the industry narrative that others follow 3 years from now. We paved the path for creative SEO, multi-channel search with Digital PR, and Social Search and we will continue to do it.",
         body2: "We're on a mission to be the first search-first agency to win a Cannes Lion disrupting the status quo.",
     },
     {
-        image: `${bp}/img/services/pr-week.png`,
+        image: "/img/services/pr-week.png",
         title: "Award Winning",
         body: "A roll top full of 79 awards. Voted The Drum's best agency outside of London. We are official judges for industry awards including Global Search and Global Content Marketing Awards.",
     },
     {
-        image: `${bp}/img/seo-week.png`,
+        image: "/img/seo-week.png",
         title: "Speed",
         body: "People ask us why we are called Rise atSeven? Ever heard the saying Early Bird cathces the worm? Google is moving fast, but humans are moving faster. We chase consumers, not algorithms. We've created a service which takes ideas to result within 60 minutes.",
     },

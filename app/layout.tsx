@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   title: "Rise at Seven",
   description: "Search-first creative agency",
   icons: {
-    icon: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/img/favicon.png`,
+    icon: "/img/favicon.png",
   },
 };
 
