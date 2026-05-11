@@ -1,22 +1,22 @@
 "use client";
 import React, { useState, useRef, useEffect } from 'react';
+import Image from 'next/image';
 import PioneerCards from '@/components/PioneerCards';
 import ReadyToRise from '@/components/ReadyToRise';
 
 export default function Hero() {
-  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
   const featuredWork = [
-    { name: 'SIXT', years: '[2023-2025]', tag: 'Car rental', image: `${basePath}/img/scroll/black-car.png` },
-    { name: 'Dojo – B2B', years: '[2021-2025]', tag: 'Fintech', image: `${basePath}/img/scroll/card-pay.png` },
-    { name: 'Magnet Trade - B2B', years: '[2022-2025]', tag: 'Gaming', image: `${basePath}/img/scroll/magnet.png` },
-    { name: 'Leading E Sim brand globally', years: '[2020-2025]', tag: 'Aviation', image: `${basePath}/img/scroll/e-sim.png` },
-    { name: 'JD Sports', years: '[2023-2025]', tag: 'B2B SaaS', image: `${basePath}/img/scroll/family.png` },
-    { name: 'Parkdean Resorts', years: '[2023-2025]', tag: 'B2B SaaS', image: `${basePath}/img/scroll/beach.png` },
-    { name: 'Pooky', years: '[2023-2025]', tag: 'B2B SaaS', image: `${basePath}/img/scroll/lamp.png` },
-    { name: 'Parkdean Resorts', years: '[2023-2025]', tag: 'B2B SaaS', image: `${basePath}/img/scroll/river.png` },
-    { name: 'Revolution Beauty', years: '[2023-2025]', tag: 'B2B SaaS', image: `${basePath}/img/scroll/cosmatices.png` },
-    { name: 'Lloyds Pharmacy', years: '[2023-2025]', tag: 'B2B SaaS', image: `${basePath}/img/scroll/peach.png` },
-    { name: 'PrettyLittleThing', years: '[2023-2025]', tag: 'B2B SaaS', image: `${basePath}/img/scroll/models.png` },
+    { name: 'SIXT', years: '[2023-2025]', tag: 'Car rental', image: '/img/scroll/black-car.png' },
+    { name: 'Dojo – B2B', years: '[2021-2025]', tag: 'Fintech', image: '/img/scroll/card-pay.png' },
+    { name: 'Magnet Trade - B2B', years: '[2022-2025]', tag: 'Gaming', image: '/img/scroll/magnet.png' },
+    { name: 'Leading E Sim brand globally', years: '[2020-2025]', tag: 'Aviation', image: '/img/scroll/e-sim.png' },
+    { name: 'JD Sports', years: '[2023-2025]', tag: 'B2B SaaS', image: '/img/scroll/family.png' },
+    { name: 'Parkdean Resorts', years: '[2023-2025]', tag: 'B2B SaaS', image: '/img/scroll/beach.png' },
+    { name: 'Pooky', years: '[2023-2025]', tag: 'B2B SaaS', image: '/img/scroll/lamp.png' },
+    { name: 'Parkdean Resorts', years: '[2023-2025]', tag: 'B2B SaaS', image: '/img/scroll/river.png' },
+    { name: 'Revolution Beauty', years: '[2023-2025]', tag: 'B2B SaaS', image: '/img/scroll/cosmatices.png' },
+    { name: 'Lloyds Pharmacy', years: '[2023-2025]', tag: 'B2B SaaS', image: '/img/scroll/peach.png' },
+    { name: 'PrettyLittleThing', years: '[2023-2025]', tag: 'B2B SaaS', image: '/img/scroll/models.png' },
   ];
 
   const [activeIndex, setActiveIndex] = useState(0);
@@ -71,16 +71,16 @@ export default function Hero() {
             <div className="flex animate-marquee" style={{ width: 'max-content' }}>
               {[0, 1].map((_, idx) => (
                 <div key={idx} className="flex items-center gap-[80px]" style={{ height: '96px', paddingRight: '80px' }}>
-                  <img src={`${basePath}/img/slide/axa.png`} alt="AXA" className="h-16 w-auto object-contain grayscale opacity-80" />
-                  <img src={`${basePath}/img/slide/capitalone.png`} alt="Capital One" className="h-16 w-auto object-contain grayscale opacity-80" />
-                  <img src={`${basePath}/img/slide/emirates.png`} alt="Emirates" className="h-16 w-auto object-contain grayscale opacity-80" />
-                  <img src={`${basePath}/img/slide/hubspot.png`} alt="HubSpot" className="h-16 w-auto object-contain grayscale opacity-80" />
-                  <img src={`${basePath}/img/slide/jd.png`} alt="JD" className="h-16 w-auto object-contain grayscale opacity-80" />
-                  <img src={`${basePath}/img/slide/kroger.png`} alt="Kroger" className="h-16 w-auto object-contain grayscale opacity-80" />
-                  <img src={`${basePath}/img/slide/playstation.png`} alt="PlayStation" className="h-16 w-auto object-contain grayscale opacity-80" />
-                  <img src={`${basePath}/img/slide/revolution.png`} alt="Revolution" className="h-16 w-auto object-contain grayscale opacity-80 scale-150" />
-                  <img src={`${basePath}/img/slide/sixt.png`} alt="SIXT" className="h-16 w-auto object-contain grayscale opacity-80" />
-                  <img src={`${basePath}/img/slide/xbox.png`} alt="Xbox" className="h-16 w-auto object-contain grayscale opacity-80" />
+                  <Image src="/img/slide/axa.png" alt="AXA" width={100} height={64} className="h-16 w-auto object-contain grayscale opacity-80" />
+                  <Image src="/img/slide/capitalone.png" alt="Capital One" width={100} height={64} className="h-16 w-auto object-contain grayscale opacity-80" />
+                  <Image src="/img/slide/emirates.png" alt="Emirates" width={100} height={64} className="h-16 w-auto object-contain grayscale opacity-80" />
+                  <Image src="/img/slide/hubspot.png" alt="HubSpot" width={100} height={64} className="h-16 w-auto object-contain grayscale opacity-80" />
+                  <Image src="/img/slide/jd.png" alt="JD" width={100} height={64} className="h-16 w-auto object-contain grayscale opacity-80" />
+                  <Image src="/img/slide/kroger.png" alt="Kroger" width={100} height={64} className="h-16 w-auto object-contain grayscale opacity-80" />
+                  <Image src="/img/slide/playstation.png" alt="PlayStation" width={100} height={64} className="h-16 w-auto object-contain grayscale opacity-80" />
+                  <Image src="/img/slide/revolution.png" alt="Revolution" width={150} height={96} className="h-16 w-auto object-contain grayscale opacity-80 scale-150" />
+                  <Image src="/img/slide/sixt.png" alt="SIXT" width={100} height={64} className="h-16 w-auto object-contain grayscale opacity-80" />
+                  <Image src="/img/slide/xbox.png" alt="Xbox" width={100} height={64} className="h-16 w-auto object-contain grayscale opacity-80" />
                 </div>
               ))}
             </div>
@@ -104,7 +104,7 @@ export default function Hero() {
                 <span className="inline-flex items-center md:items-end gap-3">
                   Discovery
                   <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-xl sm:rounded-2xl overflow-hidden shadow-md border border-white/20 flex-shrink-0 mb-1">
-                    <img src={`${basePath}/img/girl-board.png`} alt="Client" className="w-full h-full object-cover" />
+                    <Image src="/img/girl-board.png" alt="Client" width={80} height={80} className="w-full h-full object-cover" />
                   </div>
                 </span>
               </h2>
@@ -131,9 +131,11 @@ export default function Hero() {
           
           {featuredWork.map((work, i) => (
             <div key={i} className="relative w-full aspect-[4/5] rounded-3xl overflow-hidden group">
-              <img
+              <Image
                 src={work.image}
                 alt={work.name}
+                width={800}
+                height={1000}
                 className="w-full h-full object-cover"
               />
               {/* Overlay Content */}
@@ -187,9 +189,11 @@ export default function Hero() {
             >
               {featuredWork.map((work, i) => (
                 <div key={i} className="relative w-full h-[560px] flex-shrink-0 overflow-hidden rounded-2xl mb-3">
-                  <img
+                  <Image
                     src={work.image}
                     alt={work.name}
+                    width={800}
+                    height={560}
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute bottom-4 right-4 flex items-center gap-2 bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-full shadow-md">
@@ -217,7 +221,7 @@ export default function Hero() {
           <h2 className="text-5xl sm:text-6xl font-black tracking-tight text-slate-900 flex flex-wrap items-center justify-start gap-4">
             Our
             <div className="inline-flex w-16 h-16 sm:w-16 sm:h-16 rounded-2xl overflow-hidden shadow-md border border-slate-200 mx-1 align-middle flex-shrink-0">
-              <img src={`${basePath}/img/meeting.png`} alt="Our Services" className="w-full h-full object-cover" />
+              <Image src="/img/meeting.png" alt="Our Services" width={80} height={80} className="w-full h-full object-cover" />
             </div>
             Services
           </h2>
@@ -229,12 +233,12 @@ export default function Hero() {
         <div className="mx-auto max-w-7xl">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16">
             {[
-              { label: 'Digital PR', image: `${basePath}/img/services/man-card.png` },
-              { label: 'Organic Social & Content', image: `${basePath}/img/services/organic-content.png` },
-              { label: 'Search & Growth Strategy', image: `${basePath}/img/services/search-strategy.png` },
-              { label: 'Content Experience', image: `${basePath}/img/services/content-experience.png` },
-              { label: 'Data & Growth Strategy', image: `${basePath}/img/services/data-insights.png` },
-              { label: 'Onsite SEO', image: `${basePath}/img/services/onsite-seo.png` },
+              { label: 'Digital PR', image: '/img/services/man-card.png' },
+              { label: 'Organic Social & Content', image: '/img/services/organic-content.png' },
+              { label: 'Search & Growth Strategy', image: '/img/services/search-strategy.png' },
+              { label: 'Content Experience', image: '/img/services/content-experience.png' },
+              { label: 'Data & Growth Strategy', image: '/img/services/data-insights.png' },
+              { label: 'Onsite SEO', image: '/img/services/onsite-seo.png' },
             ].map((service, i) => (
               <div
                 key={i}
@@ -242,7 +246,7 @@ export default function Hero() {
               >
                 {/* Mobile/Default Inline Image */}
                 <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl overflow-hidden flex-shrink-0 shadow-sm">
-                  <img src={service.image} alt={service.label} className="w-full h-full object-cover" />
+                  <Image src={service.image} alt={service.label} width={100} height={100} className="w-full h-full object-cover" />
                 </div>
 
                 <h3 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight transition-all duration-300 lg:group-hover:opacity-0 lg:group-hover:translate-y-2">
@@ -251,7 +255,7 @@ export default function Hero() {
 
                 {/* Desktop Hover state: panoramic image pill */}
                 <div className="hidden lg:block absolute inset-0 mx-0 my-3 rounded-full overflow-hidden opacity-0 -translate-y-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0 pointer-events-none group-hover:pointer-events-auto">
-                  <img src={service.image} alt={service.label} className="w-full h-full object-cover" />
+                  <Image src={service.image} alt={service.label} width={800} height={100} className="w-full h-full object-cover" />
                   <div className="absolute inset-0 bg-black/25" />
                   <div className="absolute inset-0 flex items-center gap-3 px-6">
                     <span className="text-white text-lg font-bold">↗</span>
@@ -290,7 +294,7 @@ export default function Hero() {
                       div { width: 280px !important; height: 160px !important; }
                     }
                   `}</style>
-                  <img src={`${basePath}/img/screen.png`} alt="" className="w-full h-full object-cover" />
+                  <Image src="/img/screen.png" alt="" width={280} height={160} className="w-full h-full object-cover" />
                 </div>
 
                 <span className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight text-slate-900 px-4 sm:px-8">
@@ -307,7 +311,7 @@ export default function Hero() {
                       div { width: 160px !important; height: 160px !important; }
                     }
                   `}</style>
-                  <img src={`${basePath}/img/gang.png`} alt="" className="w-full h-full object-cover" />
+                  <Image src="/img/gang.png" alt="" width={160} height={160} className="w-full h-full object-cover" />
                 </div>
 
               </div>
@@ -331,7 +335,7 @@ export default function Hero() {
               <h2 className="text-6xl sm:text-7xl md:text-6xl font-black tracking-tight text-slate-900 flex items-center gap-4">
                 What's
                 <div className="inline-flex w-16 h-16 sm:w-20 sm:h-20 md:w-16 md:h-16 rounded-2xl overflow-hidden flex-shrink-0">
-                  <img src={`${basePath}/img/concert.png`} alt="" className="w-full h-full object-cover" />
+                  <Image src="/img/concert.png" alt="" width={80} height={80} className="w-full h-full object-cover" />
                 </div>
               </h2>
               <h2 className="text-6xl sm:text-7xl md:text-6xl font-black tracking-tight text-slate-900">
@@ -352,25 +356,25 @@ export default function Hero() {
           <div className="flex md:grid md:grid-cols-3 overflow-x-auto md:overflow-visible snap-x snap-mandatory gap-6 no-scrollbar px-6 md:px-0">
             {[
               {
-                image: `${basePath}/img/three-people.png`,
+                image: '/img/three-people.png',
                 author: 'Ray Saddiq',
-                authorImg: `${basePath}/img/ray-saddiq.png`,
+                authorImg: '/img/ray-saddiq.png',
                 readTime: '3 mins',
                 title: 'Rise at Seven Appoints Hollie Lovell as Senior Operations Lead',
                 tag: null,
               },
               {
-                image: `${basePath}/img/black-three.png`,
+                image: '/img/black-three.png',
                 author: 'Ray Saddiq',
-                authorImg: `${basePath}/img/ray-saddiq.png`,
+                authorImg: '/img/ray-saddiq.png',
                 readTime: '2 mins',
                 title: 'Rise at Seven Exits Sheffield and Triples Manchester as new HQ as they go for global expansion',
                 tag: null,
               },
               {
-                image: `${basePath}/img/bill-board.png`,
+                image: '/img/bill-board.png',
                 author: 'Carrie Rose',
-                authorImg: `${basePath}/img/ray-saddiq.png`,
+                authorImg: '/img/ray-saddiq.png',
                 readTime: '2 mins',
                 title: "Ryan McNamara Is Now Rise at Seven's Global Operations Director",
                 tag: 'News',
@@ -378,9 +382,11 @@ export default function Hero() {
             ].map((article, i) => (
               <div key={i} className="flex-shrink-0 w-[85vw] md:w-auto snap-center flex flex-col cursor-pointer group">
                 <div className="relative w-full rounded-2xl overflow-hidden mb-4" style={{ aspectRatio: '4/3' }}>
-                  <img
+                  <Image
                     src={article.image}
                     alt={article.title}
+                    width={600}
+                    height={450}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                   {article.tag && (
@@ -392,7 +398,7 @@ export default function Hero() {
                 <div className="flex items-center gap-3 mb-3">
                   <div className="flex items-center gap-1.5 bg-slate-100 rounded-full px-2 py-1">
                     <div className="w-5 h-5 rounded-full overflow-hidden bg-slate-200 flex-shrink-0">
-                      <img src={article.authorImg} alt={article.author} className="w-full h-full object-cover" />
+                      <Image src={article.authorImg} alt={article.author} width={20} height={20} className="w-full h-full object-cover" />
                     </div>
                     <span className="text-sm text-slate-600 font-medium">{article.author}</span>
                   </div>

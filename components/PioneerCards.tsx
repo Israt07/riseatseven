@@ -1,22 +1,23 @@
 "use client";
 import { useState } from "react";
+import Image from "next/image";
 
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
 
 const cards = [
     {
-        image: `${basePath}/img/girl-board.png`,
+        image: "/img/girl-board.png",
         title: "Pioneers",
         body: "We're dedicated to creating the industry narrative that others follow 3 years from now. We paved the path for creative SEO, multi-channel search with Digital PR, and Social Search and we will continue to do it.",
         body2: "We're on a mission to be the first search-first agency to win a Cannes Lion disrupting the status quo.",
     },
     {
-        image: `${basePath}/img/services/pr-week.png`,
+        image: "/img/services/pr-week.png",
         title: "Award Winning",
         body: "A roll top full of 79 awards. Voted The Drum's best agency outside of London. We are official judges for industry awards including Global Search and Global Content Marketing Awards.",
     },
     {
-        image: `${basePath}/img/seo-week.png`,
+        image: "/img/seo-week.png",
         title: "Speed",
         body: "People ask us why we are called Rise atSeven? Ever heard the saying Early Bird cathces the worm? Google is moving fast, but humans are moving faster. We chase consumers, not algorithms. We've created a service which takes ideas to result within 60 minutes.",
     },
@@ -44,7 +45,7 @@ export default function PioneerCards() {
                     >
                         {/* Image */}
                         <div className="w-full aspect-square rounded-2xl overflow-hidden mb-6">
-                            <img src={card.image} alt={card.title} className="w-full h-full object-cover" />
+                            <Image src={card.image} alt={card.title} width={400} height={400} className="w-full h-full object-cover" />
                         </div>
 
                         {/* Text */}
@@ -100,7 +101,7 @@ export default function PioneerCards() {
                             className="w-full bg-[#111111] rounded-3xl overflow-hidden p-6 flex flex-col items-center text-center select-none"
                         >
                             <div className="w-56 h-64 rounded-2xl overflow-hidden mb-6 flex-shrink-0">
-                                <img src={card.image} alt={card.title} className="w-full h-full object-cover" />
+                                <Image src={card.image} alt={card.title} width={224} height={256} className="w-full h-full object-cover" />
                             </div>
                             <h3 className="text-4xl font-black text-white mb-4">{card.title}</h3>
                             <p className="text-white/70 text-sm leading-relaxed mb-4">{card.body}</p>
